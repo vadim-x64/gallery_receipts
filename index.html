@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Торти & Тістечка</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+    <h1>Торти<span>&</span>Тістечка</h1>
+</header>
+<div class="main-container">
+    <input type="radio" name="filter" id="torty">
+    <input type="radio" name="filter" id="keksy">
+    <input type="radio" name="filter" id="tistechka">
+    <input type="radio" name="filter" id="cookies">
+    <input type="radio" name="filter" id="pancakes">
+    <input type="radio" name="filter" id="donuts">
+    <input type="radio" name="filter" id="waffles">
+    <input type="radio" name="filter" id="all" checked>
+    <div class="sidebar">
+        <h2>Калорії у порції</h2>
+        <div class="calories-filter">
+            <div class="slider-container">
+                <input type="range" min="0" max="400" value="100" class="calories-range" id="range-min">
+                <input type="range" min="0" max="400" value="300" class="calories-range" id="range-max">
+                <div class="range-slider">
+                    <div class="track"></div>
+                    <div class="track-range"></div>
+                </div>
+            </div>
+            <div class="calories-text">
+                <span>Від</span> <output for="range-min" id="output-min">0</output>
+                <span>до</span> <output for="range-max" id="output-max">300</output> <span>кКал</span>
+            </div>
+        </div>
+        <label for="torty">Торти</label>
+        <label for="keksy">Кекси</label>
+        <label for="tistechka">Тістечка</label>
+        <label for="cookies">Печиво</label>
+        <label for="pancakes">Млинці</label>
+        <label for="donuts">Донати</label>
+        <label for="waffles">Вафлі</label>
+        <label for="all">Скинути</label>
+    </div>
+    <div class="grid">
+        <div class="card torty">
+            <div class="card-image-container">
+                <img src="assets/1.jpg" alt="">
+                <div class="card-title">Торт: <span>Сметанковий</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 265 кКал</p>
+        </div>
+        <div class="card keksy">
+            <div class="card-image-container">
+                <img src="assets/2.jpg" alt="">
+                <div class="card-title">Кекс: <span>Вишня</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 305 кКал</p>
+        </div>
+        <div class="card tistechka">
+            <div class="card-image-container">
+                <img src="assets/3.jpg" alt="">
+                <div class="card-title">Тістечко: <span>Бабл Гам</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 450 кКал</p>
+        </div>
+        <div class="card cookies">
+            <div class="card-image-container">
+                <img src="assets/4.jpg" alt="">
+                <div class="card-title">Печиво: <span>Шоколадне</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 523 кКал</p>
+        </div>
+        <div class="card pancakes">
+            <div class="card-image-container">
+                <img src="assets/5.jpg" alt="">
+                <div class="card-title">Млинці: <span>з варенням</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 298 кКал</p>
+        </div>
+        <div class="card pancakes">
+            <div class="card-image-container">
+                <img src="assets/6.jpg" alt="">
+                <div class="card-title">Млинці: <span>3 ягоди</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 380 кКал</p>
+        </div>
+        <div class="card donuts">
+            <div class="card-image-container">
+                <img src="assets/7.jpg" alt="">
+                <div class="card-title">Донат: <span>з наповнювачем</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 265 кКал</p>
+        </div>
+        <div class="card donuts">
+            <div class="card-image-container">
+                <img src="assets/8.jpg" alt="">
+                <div class="card-title">Донат: <span>Шоколадний</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 400 кКал</p>
+        </div>
+        <div class="card torty">
+            <div class="card-image-container">
+                <img src="assets/9.jpg" alt="">
+                <div class="card-title">Торт: <span>Полуничний</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 310 кКал</p>
+        </div>
+        <div class="card torty">
+            <div class="card-image-container">
+                <img src="assets/10.jpg" alt="">
+                <div class="card-title">Торт: <span>Празький</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 460 кКал</p>
+        </div>
+        <div class="card pancakes">
+            <div class="card-image-container">
+                <img src="assets/11.jpg" alt="">
+                <div class="card-title">Млинці: <span>з медом</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 530 кКал</p>
+        </div>
+        <div class="card waffles">
+            <div class="card-image-container">
+                <img src="assets/12.jpg" alt="">
+                <div class="card-title">Вафлі: <span>з морозивом</span></div>
+            </div>
+            <hr>
+            <p>Калорії у порції 290 кКал</p>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>Контакти: <a href="mailto:torty@gmail.com">torty@gmail.com</a></p>
+    <p>© 2024 Smak</p>
+</footer>
+</body>
+</html>

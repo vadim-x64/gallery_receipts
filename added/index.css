@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: gray;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.buttons-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 80%;
+}
+
+.button {
+    background-color: gray;
+    color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: darkgray;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-content p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#keksy:checked ~ .header label[for="keksy"],
+#pechivo:checked ~ .header label[for="pechivo"],
+#torti:checked ~ .header label[for="torti"],
+#mlinci:checked ~ .header label[for="mlinci"],
+#donaty:checked ~ .header label[for="donaty"],
+#tistechka:checked ~ .header label[for="tistechka"],
+#vafli:checked ~ .header label[for="vafli"] {
+    background-color: white;
+    color: gray;
+}
+
+/* Приховування карток при фільтрації */
+#keksy:checked ~ .content .card:not(.keksy),
+#pechivo:checked ~ .content .card:not(.pechivo),
+#torti:checked ~ .content .card:not(.torti),
+#mlinci:checked ~ .content .card:not(.mlinci),
+#donaty:checked ~ .content .card:not(.donaty),
+#tistechka:checked ~ .content .card:not(.tistechka),
+#vafli:checked ~ .content .card:not(.vafli) {
+    display: none;
+}

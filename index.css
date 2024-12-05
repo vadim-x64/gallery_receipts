@@ -252,7 +252,7 @@ footer p a {
     color: #0070ac;
 }
 
-@media (min-width: 375px) and (max-width: 730px) {
+@media (min-width: 360px) and (max-width: 730px) {
     header h1 {
         font-size: 32px;
     }
